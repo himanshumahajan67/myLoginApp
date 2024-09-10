@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@ionic/pwa-elements": "^3.3.0",
+    "swiper": "^11.1.12"
+  }
+}

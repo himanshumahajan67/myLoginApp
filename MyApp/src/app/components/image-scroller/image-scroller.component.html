@@ -1,0 +1,8 @@
+<swiper-container [modules]="swiperModules" [config]="swiperConfig">
+  <swiper-slide *ngFor="let image of images">
+    <img [src]="image" alt="Slide image" />
+  </swiper-slide>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</swiper-container>
