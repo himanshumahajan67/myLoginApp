@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { logout } from '../store/auth/auth.actions';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(private store: Store) {}
 
-  constructor() {}
-
+  logout() {
+    this.store.dispatch(logout());
+  }
 }
