@@ -45,6 +45,3 @@ If you experience a black screen, try the following steps:
 - **Clear your browser cache**.
 - **Open the website in incognito mode**.
 
-## Development Time
-
-This application was built in **2 days**.
