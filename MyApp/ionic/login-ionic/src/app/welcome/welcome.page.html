@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title *ngIf="showHome">Welcome {{ user }}</ion-title>
+    <ion-title *ngIf="!showHome">Profile {{ user }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Home or Profile based on button click -->
+  <div *ngIf="showHome">
+    <div class="post-container" *ngFor="let post of posts">
+      <div class="post-block">
+        <button (click)="deletePost(post.id)"><ion-icon name="trash-outline"></ion-icon></button>
+        <img [src]="post.photo.url" alt="Post image" class="post-image">
+        <div class="post-content">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!showHome">
+    <h2>User Profile</h2>
+    <p>Welcome, {{ user + " (Your name is not being saved)" }}</p>
+    <button (click)="clearAllPosts()">Reset This Account<ion-icon name="trash-outline"></ion-icon></button>
+
+  </div>
+
+  <!-- Floating Action Button for Posting -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button *ngIf="showHome" (click)="addNewPost()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<!-- Bottom buttons for navigation -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleHome(true)">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleHome(false)">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

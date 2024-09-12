@@ -1,0 +1,28 @@
+/* In your login.page.scss or global styles */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Full height of ion-content */
+  }
+  
+  .login-image {
+    width: 100%; /* Ensure image takes up full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1; /* Allow this to expand and center content */
+  }
+  
+  ion-button {
+    margin-top: 20px; /* Space between image and button */
+  }
+  

@@ -1,0 +1,30 @@
+.post-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-block {
+    width: 60%;
+    background-color: #020101;
+    border: 1px solid #3d3939;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+    object-fit: cover; 
+  }
+  
+  .bottom-buttons {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+  }
+  

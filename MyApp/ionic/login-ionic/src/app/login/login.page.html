@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>IONIC ANGULAR APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="login-container">
+    <!-- Add an image swiper above the login button -->
+   
+        <img (click)="changeImage()" [src]="images[slide]" alt="Slide 1">
+      
+
+      </div>
+    </ion-content>
+    <footer>
+    <div class="login-form">
+      <ion-button expand="block" (click)="loginWithGoogle()">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Login with Google
+      </ion-button>
+    </div>
+    </footer>
